@@ -1,0 +1,130 @@
+﻿BỘ CÂU HỎI TRẮC NGHIỆM CHUYÊN ĐỀ TRÍ TUỆ NHÂN TẠO
+     Câu 1. Qua nghiên cứu chuyên đề năm 2026, đặc điểm nào khẳng định AI vẫn mang tính công cụ và phụ thuộc vào con người?
+     A. AI mô phỏng được cảm xúc con người
+     B. AI xử lý thông tin nhanh hơn con người
+     C. AI không có ý thức hay lập trường chính trị riêng
+     D. AI có khả năng tự học tập từ dữ liệu
+     Đáp án: C
+     Câu 2. Qua nghiên cứu chuyên đề năm 2026, Chiến lược quốc gia về nghiên cứu, phát triển và ứng dụng AI đến năm 2030 của Việt Nam được ban hành vào năm nào?
+     A. Năm 2010
+     B. Năm 2025
+     C. Năm 2016
+     D. Năm 2021
+     Đáp án: D
+     Câu 3. Qua nghiên cứu chuyên đề năm 2026, trong giáo dục, AI giúp giáo viên giảm tải công việc thông qua tính năng nào?
+     A. Thay thế hoàn toàn vai trò của người dạy
+     B. Tự động hóa việc chấm điểm và phân tích kết quả
+     C. Quản lý hành vi kỷ luật của học sinh tại nhà
+     D. Tự động soạn thảo toàn bộ giáo trình cho các nhà trường
+     Đáp án: B
+     Câu 4. Qua nghiên cứu chuyên đề năm 2026, trong lĩnh vực quốc phòng, AI hỗ trợ người chỉ huy như thế nào trong điều kiện tác chiến nhanh?
+     A. Thay thế người chỉ huy đưa ra mệnh lệnh cuối cùng
+     B. Tự động hóa việc tuyển chọn chiến sĩ mới
+     C. Xây dựng các phương án hành động tối ưu và đẩy nhanh tốc độ ra quyết định
+     D. Loại bỏ hoàn toàn nhu cầu về trinh sát thực địa
+     Đáp án: C
+     Câu 5. Qua nghiên cứu chuyên đề năm 2026, tác động tích cực nào của AI giúp công tác tư tưởng chuyển từ “xử lý khi đã xảy ra” sang “phòng ngừa từ sớm”?
+     A. Khả năng lưu trữ khối lượng lớn văn kiện Đảng
+     B. Khả năng thay thế cán bộ chính trị trong việc đối thoại trực tiếp
+     C. Khả năng dự báo xu hướng dư luận thông qua phân tích dữ liệu thời gian thực
+     D. Khả năng tạo ra các bài giảng video sinh động
+     Đáp án: C
+     Câu 6. Qua nghiên cứu chuyên đề năm 2026, AI hỗ trợ như thế nào trong việc bảo vệ nền tảng tư tưởng trên không gian mạng?
+     A. Tự động viết lại lịch sử dân tộc theo ý muốn của máy tính
+     B. Nhận diện nội dung xuyên tạc và các mạng lưới tài khoản ảo (bot)
+     C. Tự động khóa tất cả các tài khoản mạng xã hội cá nhân
+     D. Ngăn chặn người dân truy cập internet hoàn toàn
+     Đáp án: B
+     Câu 7. Qua nghiên cứu chuyên đề năm 2026, công nghệ nào bị các thế lực thù địch lợi dụng để giả mạo hình ảnh, giọng nói của lãnh đạo nhằm bôi nhọ?
+     A. Big Data
+     B. Cloud Computing
+     C. Deepfake
+     D. Blockchain
+     Đáp án: C
+     Câu 7. Qua nghiên cứu chuyên đề năm 2026, khái niệm “Buồng dội âm” (echo chamber) trong môi trường mạng có nghĩa là gì?
+     A. Nơi lưu trữ các bản ghi âm lịch sử của Đảng
+     B. Một hệ thống loa phát thanh thông minh trong quân đội
+     C. Phòng thí nghiệm về sóng âm thanh của AI
+     D. Người dùng chỉ tiếp cận nội dung trùng khớp với định kiến ban đầu do thuật toán gợi ý
+     Đáp án: D
+     Câu 8. Qua nghiên cứu chuyên đề năm 2026, tại sao việc cá nhân hóa nội dung của AI lại tiềm ẩn nguy cơ làm phai nhạt lòng tin chính trị?
+     A. Vì AI không thể dịch được các văn bản chính trị sang tiếng Việt để cung cấp cho người sử dụng
+     B. Vì AI liên tục đề xuất nội dung tiêu cực nếu người dùng lỡ xem các tin tức đó
+     C. Vì AI làm giảm tốc độ truy cập vào các trang báo Đảng
+     D. Vì AI yêu cầu người dùng phải trả phí để xem tin tức chính thống
+     Đáp án: B
+     Câu 9. Qua nghiên cứu chuyên đề năm 2026, một trong những thách thức đối với truyền thông chính thống là gì?
+     A. Thiếu hụt nguồn tin từ các cơ quan Đảng và Nhà nước
+     B. Thay đổi thói quen tiếp nhận thông tin của công chúng (thích ngắn, nhanh, video)
+     C. AI có khả năng viết bài hay hơn các nhà báo cách mạng
+     D. Sự biến mất hoàn toàn của các loại báo in truyền thống
+     Đáp án: B
+     Câu 10. Qua nghiên cứu chuyên đề năm 2026, giải pháp “Bình dân học vụ số” trong LLVT Quân khu nhằm mục đích gì?
+     A. Cấp chứng chỉ kỹ sư tin học cho toàn bộ quân nhân
+     B. Xóa mù chữ cho các chiến sĩ vùng sâu vùng xa
+     C. Dạy tiếng nước ngoài thông qua các ứng dụng AI, nâng cao chất lượng thực hiện nhiệm vụ
+     D. Nâng cao nhận thức, kiến thức và kỹ năng số cho cán bộ, chiến sĩ
+     Đáp án: D
+     Câu 11. Qua nghiên cứu chuyên đề năm 2026, cách nào sau đây giúp quân nhân nhận diện video deepfake?
+     A. Xem video đó có độ dài trên 10 phút hay không
+     B. Kiểm tra xem video đó có màu sắc rực rỡ hay không
+     C. Quan sát ánh mắt, chuyển động môi không tự nhiên và âm thanh không đồng bộ
+     D. Chỉ xem video trên điện thoại thông minh thay vì máy tính
+     Đáp án: C
+     Câu 12. Qua nghiên cứu chuyên đề năm 2026, tại sao cần xây dựng đội ngũ cán bộ chính trị vững về kỹ năng số?
+     A. Để họ có thể dành nhiều thời gian hơn cho việc giải trí trực tuyến
+     B. Để họ trở thành lực lượng nòng cốt dẫn dắt dư luận và phản bác thông tin xấu độc
+     C. Để giảm bớt số lượng cán bộ tại các cơ quan chính trị
+     D. Để họ thay thế nhân viên kỹ thuật sửa chữa máy tính trong đơn vị
+     Đáp án: B
+     Câu 13. Qua nghiên cứu chuyên đề năm 2026, ứng dụng “AI Chatbot” trên mạng truyền số liệu quân sự được coi là gì?
+     A. Thiết bị giải trí cho chiến sĩ
+     B. Trợ lý chính trị ảo
+     C. Người chỉ huy robot
+     D. Hệ thống tự động canh gác
+     Đáp án: B
+     Câu 14. Qua nghiên cứu chuyên đề năm 2026, trong bối cảnh AI, yếu tố nào vẫn giữ vai trò quyết định trong cuộc đấu tranh tư tưởng?
+     A. Sự hiện đại của các phần mềm diệt virus
+     B. Tốc độ đường truyền internet
+     C. Số lượng máy tính trang bị cho đơn vị
+     D. Nhân tố con người (bản lĩnh và năng lực cán bộ)
+     Đáp án: D
+     Câu 15. Qua nghiên cứu chuyên đề năm 2026, nhiệm vụ bảo vệ nền tảng tư tưởng của Đảng trong tình hình mới được đánh giá như thế nào?
+     A. Đã được hoàn thành xong nhờ có công nghệ AI
+     B. Chỉ cần thực hiện khi có xung đột xảy ra
+     C. Rất cấp bách và mang tính sống còn
+     D. Là nhiệm vụ phụ sau nhiệm vụ huấn luyện
+     Đáp án: C
+     Câu 16. Qua nghiên cứu chuyên đề năm 2026, việc phối hợp với các cơ quan chức năng ngoài Quân đội nhằm mục đích gì?
+     A. Để mượn trang thiết bị máy tính của dân sự
+     B. Xây dựng “thế trận lòng dân” trên không gian mạng
+     C. Chuyển giao hoàn toàn việc bảo vệ tư tưởng cho cơ quan công an
+     D. Để nhờ các doanh nghiệp AI viết hộ các bài báo chính trị
+     Đáp án: B
+     Câu 17. Qua nghiên cứu chuyên đề năm 2026, đặc điểm nào sau đây thể hiện bản chất công nghệ cốt lõi của Trí tuệ nhân tạo (AI)?
+     A. Sự mô phỏng các năng lực trí tuệ con người bằng phương tiện điện tử.
+     B. Khả năng tự phát triển ý thức và tình cảm độc lập với con người.
+     C. Hoạt động dựa trên sự sáng tạo không cần đến dữ liệu có sẵn.
+     D. Là một dạng trí tuệ sinh học mới được tạo ra trong phòng thí nghiệm.
+     Đáp án: A
+     Câu 18. Qua nghiên cứu chuyên đề năm 2026, mục tiêu cụ thể của Việt Nam trong Chiến lược quốc gia về AI đến năm 2030 là gì?
+     A. Thay thế toàn bộ lao động thủ công bằng hệ thống AI tự động.
+     B. Trở thành nước đứng đầu thế giới về chế tạo robot thông minh.
+     C. Nằm trong nhóm 4 nước dẫn đầu ASEAN và nhóm 50 nước dẫn đầu thế giới về AI.
+     D. Phát triển thành công AI tự nhận thức trước năm 2030.
+     Đáp án: C
+     Câu 19. Qua nghiên cứu chuyên đề năm 2026, AI tác động tích cực như thế nào đến việc quản lý dư luận trong công tác tư tưởng?
+     A. Thay thế hoàn toàn đội ngũ cán bộ làm công tác tuyên huấn.
+     B. Tự động xóa bỏ mọi ý kiến trái chiều trên không gian mạng.
+     C. Chuyển từ “xử lý khi đã xảy ra” sang “phòng ngừa từ sớm, từ xa”.
+     D. Chỉ tập trung lan tỏa thông tin tích cực và bỏ qua các luồng thông tin xấu.
+     Đáp án: C
+     Câu 20. Qua nghiên cứu chuyên đề năm 2026, giải pháp nào được coi là quan trọng hàng đầu trong việc bảo vệ nền tảng tư tưởng trước sự phát triển của AI?
+     A. Cấm cán bộ, chiến sĩ sử dụng các thiết bị di động thông minh.
+     B. Tập trung vào các biện pháp kỹ thuật để chặn các trang mạng phản động.
+     C. Xây dựng một hệ thống AI riêng biệt thay thế hoàn toàn Internet, ứng dụng kịp thời khoa học công nghệ.
+     D. Nâng cao nhận thức, thống nhất tư tưởng và trang bị kỹ năng số cho cán bộ, chiến sĩ.
+     Đáp án: D
+2
+
+

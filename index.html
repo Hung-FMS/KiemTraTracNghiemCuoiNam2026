@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ôn Luyện Thi Trắc Nghiệm</title>
+  <style>
+    * { box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background-color: #f4f6f9; margin: 0; padding: 15px; }
+
+    /* Bố cục 2 cột cho máy tính */
+    .app-layout {
+      display: flex;
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      align-items: flex-start;
+    }
+
+    /* Bảng Bài Làm bên trái */
+    .sidebar {
+      width: 280px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 15px;
+      flex-shrink: 0;
+    }
+
+    .sidebar h3 {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+    }
+
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 6px;
+    }
+
+    .nav-item {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      font-weight: bold;
+      font-size: 0.9rem;
+      border-radius: 4px;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s ease;
+    }
+
+    .nav-item:hover {
+      border-color: #007bff;
+    }
+
+    /* Trạng thái màu sắc của ô trong bảng */
+    .nav-item.answered {
+      background-color: #28a745 !important;
+      color: white !important;
+      border-color: #28a745 !important;
+    }
+
+    .nav-item.wrong {
+      background-color: #dc3545 !important;
+      color: white !important;
+      border-color: #dc3545 !important;
+    }
+
+    /* Khu vực đề thi bên phải */
+    .main-content {
+      flex-grow: 1;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      padding: 10px 0;
+      border-bottom: 2px solid #007bff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 99;
+    }
+
+    .timer { font-size: 1.2rem; font-weight: bold; color: #d9534f; }
+    .btn { background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 1rem; width: 100%; margin-top: 15px; }
+    .btn:hover { background: #0056b3; }
+    
+    .question-card { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #eee; scroll-margin-top: 70px; }
+    .question-title { font-weight: bold; margin-bottom: 10px; font-size: 1.05rem; line-height: 1.4; }
+    .option { margin: 8px 0; display: flex; align-items: flex-start; cursor: pointer; }
+    .option input { margin-right: 10px; margin-top: 3px; }
+    
+    .result-box { background: #e9ecef; padding: 15px; border-radius: 5px; margin-bottom: 20px; text-align: center; font-size: 1.2rem; }
+    .correct-ans { font-weight: bold; color: #28a745; background-color: #e8f5e9; padding: 2px 5px; border-radius: 3px; }
+    .wrong-ans { color: #dc3545; text-decoration: line-through; }
+    .badge-wrong { color: #dc3545; font-weight: bold; margin-left: 10px; }
+    .badge-correct { color: #28a745; font-weight: bold; margin-left: 10px; }
+
+    /* Responsive cho màn hình điện thoại nhỏ */
+    @media (max-width: 768px) {
+      .app-layout { flex-direction: column; }
+      .sidebar { width: 100%; position: relative; top: 0; }
+    }
+  </style>
+</head>
+<body>
+<script>
+  (function protect() {
+    // Đặt mật khẩu của bạn tại đây (ví dụ: 123456)
+    const SECRET_PASS = "292929"; 
+    
+    let pass = prompt("Nhập mật khẩu để truy cập bài thi:");
+    while (pass !== SECRET_PASS) {
+      if (pass === null) {
+        // Bấm Cancel thì chặn không cho vào
+        document.body.innerHTML = "<h2 style='text-align:center;margin-top:50px;'>Bạn cần nhập mật khẩu để truy cập!</h2>";
+        window.stop();
+        return;
+      }
+      pass = prompt("Mật khẩu không đúng! Vui lòng nhập lại:");
+    }
+  })();
+</script>
+<div class="app-layout">
+  <!-- BẢNG BÀI LÀM BÊN TRÁI -->
+  <div class="sidebar">
+    <h3>BÀI LÀM</h3>
+    <div class="nav-grid" id="navGrid"></div>
+  </div>
+
+  <!-- NỘI DUNG ĐỀ THI BÊN PHẢI -->
+  <div class="main-content">
+    <div class="header">
+      <h2>Bài Thi Trắc Nghiệm</h2>
+      <div class="timer" id="timer">20:00</div>
+    </div>
+
+    <div id="result" class="result-box" style="display: none;"></div>
+
+    <form id="quizForm">
+      <div id="questionsContainer"></div>
+      <button type="button" class="btn" id="submitBtn" onclick="submitQuiz()">Nộp bài</button>
+    </form>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script>
+  let selectedQuestions = [];
+  let userAnswers = {};
+  let timeLeft = 20 * 60; // 20 phút
+  let timerInterval;
+
+  function getRandomQuestions() {
+    let shuffled = [...RAW_QUESTIONS].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, 50);
+  }
+
+  function initQuiz() {
+    selectedQuestions = getRandomQuestions();
+    const container = document.getElementById('questionsContainer');
+    const navGrid = document.getElementById('navGrid');
+    
+    container.innerHTML = '';
+    navGrid.innerHTML = '';
+
+    selectedQuestions.forEach((q, index) => {
+      // 1. Tạo ô số ở Bảng Bài Làm (1 -> 50)
+      let navBtn = document.createElement('div');
+      navBtn.className = 'nav-item';
+      navBtn.id = `nav-${index}`;
+      navBtn.innerText = index + 1;
+      navBtn.onclick = () => scrollToQuestion(index);
+      navGrid.appendChild(navBtn);
+
+      // 2. Tạo nội dung câu hỏi
+      // Tự động làm sạch tiền tố "Câu X:" bị lặp từ nguồn dữ liệu
+      let cleanQuestion = q.question.replace(/^(Câu\s*\d+[\.\:]\s*)+/i, '');
+
+      let qHtml = `<div class="question-card" id="q${index}">
+        <div class="question-title">Câu ${index + 1}: ${cleanQuestion} <span id="status${index}"></span></div>`;
+      
+      q.options.forEach((opt, optIndex) => {
+        qHtml += `
+          <label class="option">
+            <input type="radio" name="question_${index}" value="${optIndex}" onchange="saveAnswer(${index}, ${optIndex})">
+            <span>${opt}</span>
+          </label>`;
+      });
+
+      qHtml += `</div>`;
+      container.innerHTML += qHtml;
+    });
+
+    startTimer();
+  }
+
+  // Chuyển màu ô xanh lá khi chọn đáp án
+  function saveAnswer(qIndex, optIndex) {
+    userAnswers[qIndex] = optIndex;
+    const navItem = document.getElementById(`nav-${qIndex}`);
+    if (navItem) {
+      navItem.classList.add('answered');
+    }
+  }
+
+  // Cuộn mượt tới câu hỏi khi bấm vào ô số
+  function scrollToQuestion(index) {
+    const card = document.getElementById(`q${index}`);
+    if (card) {
+      card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  function startTimer() {
+    timerInterval = setInterval(() => {
+      timeLeft--;
+      let minutes = Math.floor(timeLeft / 60);
+      let seconds = timeLeft % 60;
+      document.getElementById('timer').innerText = 
+        `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+      if (timeLeft <= 0) {
+        clearInterval(timerInterval);
+        alert('Đã hết thời gian 20 phút! Hệ thống tự động nộp bài.');
+        submitQuiz();
+      }
+    }, 1000);
+  }
+
+  function submitQuiz() {
+    clearInterval(timerInterval);
+    document.getElementById('submitBtn').style.display = 'none';
+    document.getElementById('timer').style.display = 'none';
+
+    let score = 0;
+
+    selectedQuestions.forEach((q, index) => {
+      const userSelected = userAnswers[index];
+      const card = document.getElementById(`q${index}`);
+      const options = card.querySelectorAll('.option');
+      const statusSpan = document.getElementById(`status${index}`);
+      const navItem = document.getElementById(`nav-${index}`);
+
+      options.forEach((optLabel, optIndex) => {
+        const input = optLabel.querySelector('input');
+        input.disabled = true;
+
+        // In đậm đáp án đúng
+        if (optIndex === q.answer) {
+          optLabel.querySelector('span').classList.add('correct-ans');
+        }
+
+        // Đánh dấu đáp án làm sai
+        if (userSelected === optIndex && userSelected !== q.answer) {
+          optLabel.querySelector('span').classList.add('wrong-ans');
+        }
+      });
+
+      // Kiểm tra đúng/sai để tô màu Bảng Bài Làm
+      if (userSelected === q.answer) {
+        score++;
+        statusSpan.innerHTML = `<span class="badge-correct">✓ Đúng</span>`;
+        if (navItem) {
+          navItem.className = 'nav-item answered'; // Giữ xanh lá
+        }
+      } else {
+        statusSpan.innerHTML = `<span class="badge-wrong">✗ Sai</span>`;
+        if (navItem) {
+          navItem.className = 'nav-item wrong'; // Chuyển sang đỏ
+        }
+      }
+    });
+
+    // Hiển thị kết quả kèm nút "Làm bài mới"
+    const resultDiv = document.getElementById('result');
+    resultDiv.style.display = 'block';
+    resultDiv.innerHTML = `
+      <div><strong>KẾT QUẢ: ${score} / 50 CÂU ĐÚNG</strong> (${(score * 0.2).toFixed(1)} điểm)</div>
+      <button class="btn" style="width: auto; margin-top: 10px; background: #28a745;" onclick="initQuiz()">🔄 Làm bài mới</button>
+    `;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  window.onload = initQuiz;
+</script>
+</body>
+</html>
