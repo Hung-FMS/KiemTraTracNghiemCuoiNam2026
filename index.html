@@ -120,21 +120,6 @@
 </head>
 <body>
 
-<script>
-  (function protect() {
-    const SECRET_PASS = "123456"; 
-    let pass = prompt("Nhập mật khẩu để truy cập bài thi:");
-    while (pass !== SECRET_PASS) {
-      if (pass === null) {
-        document.body.innerHTML = "<h2 style='text-align:center;margin-top:50px;'>Bạn cần nhập mật khẩu để truy cập!</h2>";
-        window.stop();
-        return;
-      }
-      pass = prompt("Mật khẩu không đúng! Vui lòng nhập lại:");
-    }
-  })();
-</script>
-
 <div class="app-layout">
   <!-- BẢNG BÀI LÀM BÊN TRÁI -->
   <div class="sidebar">
@@ -160,10 +145,23 @@
 
 <script src="data.js"></script>
 <script>
+  // MẬT KHẨU TRUY CẬP (Có thể thay đổi tại đây)
+  const PASSWORD = "292929";
+
   let selectedQuestions = [];
   let userAnswers = {};
   let timeLeft = 20 * 60;
   let timerInterval = null;
+
+  function checkPassword() {
+    let input = prompt("Nhập mật khẩu để truy cập bài thi:");
+    if (input !== PASSWORD) {
+      alert("Mật khẩu không chính xác!");
+      document.body.innerHTML = "<h2 style='text-align:center;margin-top:50px;color:red;'>Sai mật khẩu! Vui lòng tải lại trang để nhập lại.</h2>";
+      return false;
+    }
+    return true;
+  }
 
   function getRandomQuestions() {
     let shuffled = [...RAW_QUESTIONS].sort(() => 0.5 - Math.random());
@@ -171,14 +169,11 @@
   }
 
   function startTimer() {
-    // Dừng bộ đếm cũ nếu đang chạy
     if (timerInterval) {
       clearInterval(timerInterval);
     }
 
-    timeLeft = 20 * 60; // Reset lại đúng 20 phút
-    
-    // Cập nhật ngay giao diện đồng hồ về 20:00
+    timeLeft = 20 * 60; // Reset 20 phút
     document.getElementById('timer').innerText = "20:00";
     document.getElementById('timer').style.display = 'block';
 
@@ -200,7 +195,6 @@
   function initQuiz() {
     userAnswers = {};
     
-    // Reset giao diện các nút bấm
     document.getElementById('result').style.display = 'none';
     document.getElementById('submitBtn').style.display = 'block';
 
@@ -236,7 +230,6 @@
       container.innerHTML += qHtml;
     });
 
-    // Kích hoạt đồng hồ đếm ngược mới
     startTimer();
   }
 
@@ -256,7 +249,6 @@
   }
 
   function submitQuiz() {
-    // Dừng đồng hồ ngay lập tức khi nộp bài
     if (timerInterval) {
       clearInterval(timerInterval);
     }
@@ -305,7 +297,11 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
-  window.onload = initQuiz;
+  window.onload = function() {
+    if (checkPassword()) {
+      initQuiz();
+    }
+  };
 </script>
 </body>
 </html>
